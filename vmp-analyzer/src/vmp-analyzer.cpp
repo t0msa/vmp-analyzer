@@ -168,7 +168,7 @@ int main(int argc, char** argv) {
 	localtime_s(&tm_buf, &tm);
 
 	std::string buf(260, '\0');
-	strftime(&buf[0], buf.size() + 420, "%F.%H_%M_%S", &tm_buf);
+	strftime(&buf[0], buf.size(), "%F.%H_%M_%S", &tm_buf);
 
 	// Resize the string to the point where there's only one null terminator.
 	buf.resize(buf.find('\0'));
