@@ -47,7 +47,7 @@ bool is_vm_entry_call(uint8_t* p) {
 }
 
 bool is_push_reg_or_flag(uint8_t* p) {
-	// 0x9C = pushf, 0x60 = pusha, 0x50 -> 0x57 = push r + reg number, 0x41 = Instruction Prefix | inc eax/rax.
+	// 0x9C = pushf, 0x60 = pusha, 0x50 -> 0x57 = push r + reg number, 0x41 = Instruction Prefix (x64 only).
 	return *p == 0x9C || *p == 0x60 || *p >= 0x50 && *p <= 0x57 || *p == 0x41 && p[1] >= 0x50 && p[1] <= 0x57;
 }
 
