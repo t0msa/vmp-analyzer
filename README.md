@@ -12,7 +12,6 @@
 ### Motivation
 
 I decided to make this tool when I wanted to dump all possible VM Entries. It has worked for all VMProtect 3.5.0 binaries I've tested, you have to try other versions yourself. I don't think it'll work with VMProtect 2 binaries.
-Examples
 
 ### Example images
 ![Example of usage](https://i.imgur.com/AslMyUS.png) 
