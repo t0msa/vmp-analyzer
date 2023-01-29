@@ -92,7 +92,7 @@ int main(int argc, char** argv) {
 		const auto nt_headers = win_img->get_nt_headers();
 
 		if (nt_headers->signature != win::NT_HDR_MAGIC)
-			throw std::exception("Warning: Binary doesn't have a valid NT signature.\n");
+			throw std::exception("Binary doesn't have a valid NT signature.\n");
 
 		if (nt_headers->file_header.characteristics.machine_32 && X64)
 			throw std::exception("Please use the 32-bit version of this tool to analyze 32-bit binaries.\n");
